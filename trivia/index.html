@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener("DOMContentLoaded", function()
+            {
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function()
+                {
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector('#isCorrect').innerHTML = "Correct";
+                });
+                let incorrect = document.querySelectorAll(".incorrect");
+                for (let i = 0; i < incorrect.length; i++)
+                {
+                    incorrect[i].addEventListener("click", function()
+                    {
+                        incorrect[i].style.backgroundColor = "red";
+                        document.querySelector("#isCorrect").innerHTML = "Incorrect";
+                    });
+                }
+
+                document.querySelector("#check").addEventListener("click", function()
+                {
+                    let input = document.querySelector("input");
+                    if (input.value === "London")
+                    {
+                        input.style.backgroundColor = "green";
+                        document.querySelector("#isCorrect2").innerHTML = input.value + " is Correct";
+                    }
+                    else
+                    {
+                        input.style.backgroundColor = "red";
+                        document.querySelector("#isCorrect2").innerHTML = input.value + " is Incorrect";
+                    }
+                });
+            });
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>Which country has the biggest total population?</h3>
+                <p id="isCorrect"></p>
+                <button class="incorrect">America</button>
+                <button class="incorrect">India</button>
+                <button class="correct">China</button>
+                <button class="incorrect">Russia</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What is the Capital of Britain</h3>
+                <input type="text"</input>
+                <button id="check">Check Answer</button>
+                <p id="isCorrect2"></p>
+            </div>
+        </div>
+    </body>
+</html>
