@@ -1,0 +1,13 @@
+sort1 uses: Bubble Sort
+
+How do you know?: I know because when i put in a sorted text file it returned it pretty fast, but when i put in a random file or an reversed file it
+returned pretty slowly
+
+sort2 uses: Merge Sort
+
+How do you know?: It was the fastest sorting method with large numbers. worked all the text files relevently equally,
+which fits the O(n log n) and the "Omega"(n log n)
+
+sort3 uses: Selection Sort
+
+How do you know?: It finished sorting the random.txt and the sorted.txt relevently equally and also wasnt the fastest when dealing with large numbers
